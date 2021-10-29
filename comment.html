@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="styles.css">
+	<link rel="icon" href="img/favicon.ico">
+	<title>REDDOOT</title>
+</head>
+<body>
+	<nav class="flex" style="border-bottom: 2px solid #CACACA;">
+		<div class="col_1-3"><img src="img/nav-left.jpg"></div>
+		<div class="col_1-3 search">
+			<input id="id" type="text" placeholder="Search Reddoot">
+		</div>
+		<div class="col_1-3"><img onclick="userClick();" src="img/nav-right.jpg" style="cursor: pointer;"></div>
+		<div id="dropdown">
+			<img src="img/setting_01.jpg"><br>
+			<a href="settingPage.html"><img src="img/setting_02.jpg"></a><br>
+			<img src="img/setting_03.jpg">
+		</div>
+	</nav>
+	<main style="background-color: #2F2F30;">
+		<section style="max-width: 1200px; margin: 0 auto; background-color: #DADEE4;">
+			<img src="img/comment-top.png">
+			<div class="flex">
+				<div class="col_2-3" style="padding-left: 20px;">
+					<div class="comment">
+						<img src="img/comment-left.png"><br>
+						<div style="margin-left: 2.5vw;">
+							<span style="line-height: 2em;">Comment as</span><br>
+							<textarea id="comment" cols="30" rows="6" placeholder="What are your thoughts?"></textarea>
+							<div class="commentBtn"><img src="img/commentBtn.png" style="cursor: pointer;" onclick="sendComment();"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col_1-3" style="padding-right: 20px;"><img src="img/comment-right.png"></div>
+			</div>
+		</section>
+	</main>
+
+
+	<script>
+		function userClick() {
+			document.querySelector('#dropdown').classList.add('show');
+		}
+
+		function sendComment() {
+			const id = document.querySelector('#id');
+			const comment = document.querySelector('#comment');
+			const commentBtn = document.querySelector('.commentBtn');
+			commentBtn.addEventListener('click', event => {
+				if(comment.value != '') {
+					const newItem = document.createElement('div')
+					newItem.classList.add('message');
+					newItem.innerHTML = `
+						<h4>${id.value}</h4>
+						<p>
+							${comment.value}<br>
+							<img src="img/message.png">
+						</p>
+					`
+
+					document.querySelector('.comment').appendChild(newItem);
+					id.value = '';
+					comment.value = '';
+				}
+			})
+		}
+	</script>
+</body>
+</html>

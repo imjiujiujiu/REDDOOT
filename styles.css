@@ -1,0 +1,165 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    display: inline-block;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    background-color: #ffffff;
+    width: 100vw;
+}
+
+main {
+    margin: auto;
+    margin-top: 4.6vw;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col_1-3 {
+    flex: 33.33%;
+    max-width: 33.33%;
+}
+
+.col_2-3 {
+    flex: 66.66%;
+    max-width: 66.66%;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search input {
+    background-image: url(img/search.png);
+    background-position: left 10px center;
+    background-repeat: no-repeat;
+    padding: 10px;
+    padding-left: 44px;
+    width: 80%;
+    border-radius: 6px;
+    background-color: #F4F5F6;
+    border: 1px solid #B1B1B1;
+}
+
+#dropdown {
+    display: none;
+}
+
+#dropdown.show {
+    display: initial;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    border: 1px solid #B1B1B1;
+    background-color: #ffffff;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+#alert {
+    display: none;
+}
+
+#alert.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+#alert.show > div {
+    background-color: #ffffff;
+    border-radius: 10px;
+    max-width: 40vw;
+    border: 1px solid #B1B1B1;
+    padding: 30px;
+}
+
+.comment {
+    margin-top: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #B1B1B1;
+    padding: 20px;
+}
+
+#comment {
+    margin-top: 10px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    border-radius: 10px;
+    border: 1px solid #B1B1B1;
+    padding: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: none;
+}
+
+.commentBtn {
+    background-color: #F4F5F6;
+    background-image: url(img/commentBg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: -4px;
+    width: 100%;
+    background-size: 100%;
+    border-radius: 10px;
+    border: 1px solid #B1B1B1;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top: none;
+    padding: 10px;
+}
+
+.message {
+    margin-top: 36px;
+    margin-left: 2.5vw;
+}
+
+.message h4 {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 40px;
+}
+
+.message h4::before {
+    content: url(img/smile.png);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.message p {
+    margin-left: 14px;
+    padding-left: 12px;
+    border-left: 3px solid #d5dbde ;
+}

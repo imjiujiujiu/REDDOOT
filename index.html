@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="styles.css">
+	<link rel="icon" href="img/favicon.ico">
+	<title>REDDOOT</title>
+</head>
+<body>
+	<nav class="flex" style="border-bottom: 2px solid #CACACA;">
+		<div class="col_1-3"><img src="img/nav-left.jpg"></div>
+		<div class="col_1-3 search">
+			<input type="text" placeholder="Search Reddoot">
+		</div>
+		<div class="col_1-3"><img onclick="userClick();" src="img/nav-right.jpg" style="cursor: pointer;"></div>
+		<div id="dropdown">
+			<img src="img/setting_01.jpg"><br>
+			<a href="settingPage.html"><img src="img/setting_02.jpg"></a><br>
+			<img src="img/setting_03.jpg">
+		</div>
+	</nav>
+	<main style="max-width: 1200px; padding-top: 20px;">
+		<section class="flex">
+			<div class="col_2-3">
+				<img src="img/main-left_01.jpg"><br>
+				<a href="comment.html"><img style="margin-top: -4px;" src="img/main-left_02.jpg"></a><br>
+				<img src="img/main-left_03.jpg">
+			</div>
+			<div class="col_1-3"><img src="img/main-right.jpg"></div>
+		</section>
+	</main>
+
+
+	<script>
+		function userClick() {
+			document.querySelector('#dropdown').classList.add('show');
+		}
+	</script>
+</body>
+</html>
