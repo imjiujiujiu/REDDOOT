@@ -27,7 +27,7 @@
 		<div id="alert">
 			<div style="text-align: right;">
 				<img src="img/alert.png"><br><br><br><br>
-				<img src="img/cancelBtn.png">　
+				<img src="img/cancelBtn.png" onclick="close();">　
 				<a href="index.html"><img src="img/deactivateBtn.png"></a>
 			</div>
 		</div>
@@ -41,6 +41,10 @@
 
 		function alert() {
 			document.querySelector('#alert').classList.add('show');
+		}
+
+		function close() {
+			document.querySelector('#alert.show').classList.remove('show');
 		}
 	</script>
 </body>
