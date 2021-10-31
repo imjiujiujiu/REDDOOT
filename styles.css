@@ -158,6 +158,10 @@ main {
     transform: translateY(-50%);
 }
 
+.message.red h4::before {
+    content: url(img/smile-red.png);
+}
+
 .message p {
     margin-left: 14px;
     padding-left: 24px;
